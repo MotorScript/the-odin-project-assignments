@@ -98,11 +98,28 @@ body {
 
 }
 
+.form-row textarea {
+    font: 14px "Helvetica";
+    color: #999ea3;
+    border: 1px solid #D6D9DC;
+    border-radius: 5px;
+    min-height: 200px;
+    margin-bottom: 10px;
+    padding: 7px;
+    resize: none;
+}
+
+.form-row .instructions {
+    color: #999999;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
 @media only screen and (min-width: 700px) {
 
     .speaker-form,
     .speaker-form-header {
-        width: 600px
+        width: max(650px, 90%);
     }
 
     .form-row {
@@ -116,14 +133,14 @@ body {
     .form-row input[type="email"],
     .form-row select,
     .form-row textarea {
-        width: 250px;
+        width: min(450px, 70%);
         height: initial;
 
     }
 
     .form-row label {
         text-align: right;
-        width: 120px;
+        width: max(120px, 20%);
         margin-top: 7px;
         padding-right: 20px;
     }
@@ -133,7 +150,7 @@ body {
     }
 
     .legacy-form-row legend {
-        width: 120px;
+        width: max(120px, 20%);
         text-align: right;
         padding-right: 20px;
         float: left;
@@ -141,5 +158,9 @@ body {
 
     .legacy-form-row legend::after {
         content: ":";
+    }
+
+    .form-row .instructions {
+        margin-left: max(120px, 20%);
     }
 }
